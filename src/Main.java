@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         int[] payment = new int [] {123, 321, 444, 555, 666,};
@@ -31,12 +33,17 @@ public class Main {
             sum3 = sum3 + payment3[i];
         }
         double averagePayment = (double)sum3 / weekInMonth;
-        System.out.printf("Средняя сумма трат за месяц составила "+ averagePayment + " рублей.");
+        System.out.println("Средняя сумма трат за месяц составила "+ averagePayment + " рублей.");
         // Задание 4
         System.out.println("Задание 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-
-        for (int i = 0; i < reverseFullName.length; i++) {
+        char[] fullName = new char[11];
+        int b = 0;
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            fullName[b] = reverseFullName[i];
+            b++;
         }
-    }
+        System.out.println(reverseFullName.length);
+        System.out.println(Arrays.toString(fullName));
+    };
 }
